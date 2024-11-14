@@ -151,7 +151,7 @@ document.getElementById('game-setup').addEventListener('submit', (e) => {
 
 async function makeApiCall(action) {
     try {
-        const response = await fetch(`https://api-staging.tactics.dev/api/run`, {
+        const response = await fetch(`https://api.tactics.dev/api/run`, {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
