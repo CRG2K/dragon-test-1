@@ -169,7 +169,7 @@ const UIManager = {
         this.appendToOutput(`Result: ${result.player_action_result}`, 'combat-details');
         
         // Enemy results
-        this.appendToOutput(`${enemy_stats.type}'s action: ${result.enemy_action}`, 'combat-details');
+        this.appendToOutput(`${game.enemy_stats.type}'s action: ${result.enemy_action}`, 'combat-details');
         const enemySuccess = result.enemy_roll >= result.enemy_difficulty;
         this.appendToOutput(
             `Roll: ${result.enemy_roll} vs difficulty ${result.enemy_difficulty} (${enemySuccess ? 'SUCCESS' : 'FAILURE'})`,
@@ -194,7 +194,11 @@ const GameManager = {
         STATE.elements.storyText.textContent = STATE.game.story_opening;
         UIManager.updateStats();
         GameManager.initializeTacticLink();
-        GameManager.addResetButton();
+        
+        // Only add reset button if it doesn't exist
+        if (!document.querySelector('.reset-button')) {
+            GameManager.addResetButton();
+        }
     },
     
     addResetButton: () => {
@@ -226,6 +230,12 @@ const GameManager = {
     },
     
     resetGame() {
+        // Remove the reset button before resetting
+        const resetButton = document.querySelector('.reset-button');
+        if (resetButton) {
+            resetButton.remove();
+        }
+        
         // Reset state to defaults
         STATE.game = GameState.create({
             tacticUrl: null,
