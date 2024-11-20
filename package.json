@@ -1,0 +1,21 @@
+{
+  "name": "dragon-test-1",
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview",
+    "postinstall": "tsx scripts/update-package-json.ts"
+  },
+  "devDependencies": {
+    "typescript": "^5.0.2",
+    "vite": "^4.4.5",
+    "tsx": "^3.12.7",
+    "@types/node": "^18.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/CRG2K/dragon-test-1.git"
+  }
+}

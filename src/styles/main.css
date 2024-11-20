@@ -1,0 +1,167 @@
+/* Base styles */
+body {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    font-family: 'Courier New', Courier, monospace;
+    background-color: #1a1a1a;
+    color: #fff;
+}
+
+/* Layout containers */
+#game-container,
+#config-form {
+    border: 1px solid #444;
+    padding: 20px;
+    border-radius: 5px;
+    background-color: #222;
+}
+
+#config-form {
+    margin-bottom: 20px;
+}
+
+#stats {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+/* Text elements */
+#story-text {
+    white-space: pre-wrap;
+    margin-bottom: 20px;
+}
+
+#game-output,
+#tactic-info {
+    margin: 20px 0;
+    padding: 10px;
+    background-color: #222;
+    border: 1px solid #444;
+    border-radius: 4px;
+}
+
+#loading {
+    display: none;
+    margin: 10px 0;
+    color: #ffd700;
+}
+
+/* Form elements */
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.form-group input,
+.form-group textarea,
+#action-input {
+    width: 100%;
+    padding: 8px;
+    background-color: #333;
+    color: #fff;
+    border: 1px solid #444;
+    border-radius: 4px;
+}
+
+#action-input {
+    margin: 10px 0;
+    padding: 10px;
+}
+
+.form-group small {
+    display: block;
+    color: #888;
+    margin-top: 5px;
+}
+
+/* Links */
+.form-group small a,
+#tactic-link {
+    color: #4a9eff;
+    text-decoration: none;
+}
+
+#tactic-link:hover {
+    text-decoration: underline;
+}
+
+/* Buttons */
+button[type="submit"],
+.tactic-button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    color: #fff;
+    transition: background-color 0.2s;
+}
+
+button[type="submit"] {
+    background-color: #4a9eff;
+}
+
+button[type="submit"]:hover {
+    background-color: #3a7fcf;
+}
+
+.tactic-button {
+    background-color: #1c4472;
+    padding: 8px 15px;
+    margin-left: 10px;
+}
+
+.tactic-button:hover {
+    background-color: #112a42;
+}
+
+/* Status indicators */
+.success {
+    color: #4aff4a;
+}
+
+.failure {
+    color: #ff4a4a;
+}
+
+/* Game text styles */
+.game-text.user-input {
+    color: #4a9eff;
+}
+
+.game-text.turn-header {
+    color: #ffd700;
+}
+
+.game-text.combat-details {
+    color: #fff;
+}
+
+.game-text.roll-details {
+    color: #ff9f4a;
+}
+
+.game-text.error {
+    color: #ff4a4a;
+}
+
+.game-text.game-over {
+    color: #4aff4a;
+}
+
+/* Editable elements */
+.editable {
+    color: #4a9eff;
+    padding: 2px 5px;
+    border-radius: 3px;
+}
+
+.editable:hover {
+    background-color: #2a2a2a;
+    cursor: pointer;
+}
